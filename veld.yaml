@@ -4,7 +4,7 @@ x-veld:
 services:
   veld:
     build: .
-    command: python /veld/code/load.py
+    command: python /veld/code/preprocess.py
     volumes:
       - ./src/:/veld/code/
 
