@@ -4,6 +4,7 @@ import requests
 from nltk.tokenize import sent_tokenize
 
 
+IN_URL = os.getenv("in_url")
 OUT_FILE = "/veld/output/" + os.getenv("out_file")
 
 
@@ -12,7 +13,7 @@ nltk.download('punkt')
 
 
 # download and process text
-content = requests.get("https://github.com/mxw/grmr/raw/master/src/finaltests/bible.txt").text
+content = requests.get(IN_URL).text
 content = content.lower()
 content = content.replace("\r\n", " ")
 content = sent_tokenize(content)
