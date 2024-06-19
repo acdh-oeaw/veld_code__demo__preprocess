@@ -1,5 +1,6 @@
 x-veld:
   code:
+    # TODO
 
 services:
   veld:
@@ -7,4 +8,7 @@ services:
     command: python /veld/code/preprocess.py
     volumes:
       - ./src/:/veld/code/
+      - ./data/:/veld/output/
+    environment:
+      out_file: "bible.txt"
 
